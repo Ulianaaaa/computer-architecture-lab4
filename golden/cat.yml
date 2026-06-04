@@ -1,0 +1,11 @@
+in_source: |
+  a = read();
+  print(a);
+in_trap_schedule: "[[0, 77]]"
+out_stdout: |-
+  --- SUCCESS: 5 instrs ---
+
+  --- SIMULATION FINISHED ---
+  Result: 77
+  Ticks: 20
+  Cache Hits: 1, Misses: 1

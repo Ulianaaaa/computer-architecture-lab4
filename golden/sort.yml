@@ -1,0 +1,10 @@
+in_source: |
+  a = 100; b = 20;
+  if (a > b) { print(a); }
+out_stdout: |-
+  --- SUCCESS: 11 instrs ---
+
+  --- SIMULATION FINISHED ---
+  Result: 100
+  Ticks: 31
+  Cache Hits: 3, Misses: 2

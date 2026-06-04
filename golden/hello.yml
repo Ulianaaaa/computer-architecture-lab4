@@ -1,0 +1,10 @@
+in_source: |
+  s = "Hello World!";
+  print(s);
+out_stdout: |-
+  --- SUCCESS: 5 instrs ---
+
+  --- SIMULATION FINISHED ---
+  Result: Hello World!
+  Ticks: 15
+  Cache Hits: 1, Misses: 1

@@ -1,0 +1,15 @@
+in_source: |
+  a = 0; b = 0; limit = 100;
+  for (i = 1, limit, 1) {
+      a = a + i * i;
+      b = b + i;
+  }
+  res = (b * b) - a;
+  print(res);
+out_stdout: |-
+  --- SUCCESS: 36 instrs ---
+
+  --- SIMULATION FINISHED ---
+  Result: 25164150
+  Ticks: 1971
+  Cache Hits: 1106, Misses: 5
