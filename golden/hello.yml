@@ -1,10 +1,18 @@
 in_source: |
   s = "Hello World!";
   print(s);
-out_stdout: |-
-  --- SUCCESS: 5 instrs ---
-
-  --- SIMULATION FINISHED ---
-  Result: Hello World!
-  Ticks: 15
-  Cache Hits: 1, Misses: 1
+out_code: |-
+  ADDRESS  - HEXCODE  - MNEMONIC
+  --------------------------------
+  00000000 - 07100064 - Opcode.LI rd:1 rs1:0 imm:100
+  00000004 - 06010071 - Opcode.SW rd:0 rs1:1 imm:113
+  00000008 - 05100071 - Opcode.LW rd:1 rs1:0 imm:113
+  0000000C - 0E010085 - Opcode.OUT rd:0 rs1:1 imm:133
+  00000010 - FF000000 - Opcode.HALT rd:0 rs1:0 imm:0
+out_log: |-
+  Tick: 0000 | PC: 000 | li   rd:1 rs1:0 imm: 100 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0001 | PC: 001 | sw   rd:0 rs1:1 imm: 113 | R1:100 R2:0 R3:0 | G:0 Z:0
+  Tick: 0012 | PC: 002 | lw   rd:1 rs1:0 imm: 113 | R1:100 R2:0 R3:0 | G:0 Z:0
+  Tick: 0013 | PC: 003 | out  rd:0 rs1:1 imm: 133 | R1:100 R2:0 R3:0 | G:0 Z:0
+  Tick: 0014 | PC: 004 | halt rd:0 rs1:0 imm:   0 | R1:100 R2:0 R3:0 | G:0 Z:0
+out_stdout: Hello World!

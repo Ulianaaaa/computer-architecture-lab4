@@ -1,0 +1,39 @@
+in_source: |
+  print("What is your name?");
+  n1 = read();
+  n2 = read();
+  print("Hello, ");
+  print(n1);
+  print(n2);
+in_trap_schedule: '[[100, 65], [150, 108]]'
+out_code: |-
+  ADDRESS  - HEXCODE  - MNEMONIC
+  --------------------------------
+  00000000 - 07100064 - Opcode.LI rd:1 rs1:0 imm:100
+  00000004 - 0E010085 - Opcode.OUT rd:0 rs1:1 imm:133
+  00000008 - 0D100080 - Opcode.IN rd:1 rs1:0 imm:128
+  0000000C - 06010077 - Opcode.SW rd:0 rs1:1 imm:119
+  00000010 - 0D100080 - Opcode.IN rd:1 rs1:0 imm:128
+  00000014 - 06010078 - Opcode.SW rd:0 rs1:1 imm:120
+  00000018 - 07100079 - Opcode.LI rd:1 rs1:0 imm:121
+  0000001C - 0E010085 - Opcode.OUT rd:0 rs1:1 imm:133
+  00000020 - 05100077 - Opcode.LW rd:1 rs1:0 imm:119
+  00000024 - 0E010084 - Opcode.OUT rd:0 rs1:1 imm:132
+  00000028 - 05100078 - Opcode.LW rd:1 rs1:0 imm:120
+  0000002C - 0E010084 - Opcode.OUT rd:0 rs1:1 imm:132
+  00000030 - FF000000 - Opcode.HALT rd:0 rs1:0 imm:0
+out_log: |-
+  Tick: 0000 | PC: 000 | li   rd:1 rs1:0 imm: 100 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0001 | PC: 001 | out  rd:0 rs1:1 imm: 133 | R1:100 R2:0 R3:0 | G:0 Z:0
+  Tick: 0002 | PC: 002 | in   rd:1 rs1:0 imm: 128 | R1:100 R2:0 R3:0 | G:0 Z:0
+  Tick: 0003 | PC: 003 | sw   rd:0 rs1:1 imm: 119 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0014 | PC: 004 | in   rd:1 rs1:0 imm: 128 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0015 | PC: 005 | sw   rd:0 rs1:1 imm: 120 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0026 | PC: 006 | li   rd:1 rs1:0 imm: 121 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0027 | PC: 007 | out  rd:0 rs1:1 imm: 133 | R1:121 R2:0 R3:0 | G:0 Z:0
+  Tick: 0028 | PC: 008 | lw   rd:1 rs1:0 imm: 119 | R1:121 R2:0 R3:0 | G:0 Z:0
+  Tick: 0029 | PC: 009 | out  rd:0 rs1:1 imm: 132 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0030 | PC: 010 | lw   rd:1 rs1:0 imm: 120 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0031 | PC: 011 | out  rd:0 rs1:1 imm: 132 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0032 | PC: 012 | halt rd:0 rs1:0 imm:   0 | R1:0 R2:0 R3:0 | G:0 Z:0
+out_stdout: What is your name? Hello,  0 0
