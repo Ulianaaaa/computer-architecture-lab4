@@ -69,114 +69,114 @@ out_code: |-
   000000E0 - 0E010084 - Opcode.OUT rd:0 rs1:1 imm:132
   000000E4 - FF000000 - Opcode.HALT rd:0 rs1:0 imm:0
 out_log: |-
-  Tick: 0000 | PC: 000 | in   rd:1 rs1:0 imm: 128 | R1:0 R2:0 R3:0 | G:0 Z:0
-  Tick: 0001 | PC: 001 | sw   rd:0 rs1:1 imm: 100 | R1:0 R2:0 R3:0 | G:0 Z:0
+  Tick: 0000 | PC: 00 Opcode.IN R1:0 R2:0
+  Tick: 0001 | PC: 01 Opcode.SW R1:0 R2:0
   TICK: 0012 | !!! TRAP INTERRUPT: Value 5 !!!
-  Tick: 0017 | PC: 000 | in   rd:1 rs1:0 imm: 128 | R1:0 R2:0 R3:0 | G:0 Z:0
-  Tick: 0018 | PC: 001 | sw   rd:0 rs1:1 imm: 100 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0019 | PC: 002 | in   rd:1 rs1:0 imm: 128 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0020 | PC: 003 | sw   rd:0 rs1:1 imm: 101 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0031 | PC: 004 | in   rd:1 rs1:0 imm: 128 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0032 | PC: 005 | sw   rd:0 rs1:1 imm: 102 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0043 | PC: 006 | in   rd:1 rs1:0 imm: 128 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0044 | PC: 007 | sw   rd:0 rs1:1 imm: 103 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0055 | PC: 008 | li   rd:1 rs1:0 imm:   0 | R1:5 R2:0 R3:0 | G:0 Z:0
-  Tick: 0056 | PC: 009 | sw   rd:0 rs1:1 imm: 104 | R1:0 R2:0 R3:0 | G:0 Z:0
-  Tick: 0067 | PC: 010 | lw   rd:1 rs1:0 imm: 104 | R1:0 R2:0 R3:0 | G:0 Z:0
-  Tick: 0068 | PC: 011 | li   rd:2 rs1:0 imm:   3 | R1:0 R2:0 R3:0 | G:0 Z:0
-  Tick: 0069 | PC: 012 | cmp  rd:0 rs1:1 imm:   2 | R1:0 R2:3 R3:0 | G:0 Z:0
-  Tick: 0070 | PC: 013 | bgt  rd:0 rs1:0 imm:  49 | R1:0 R2:3 R3:0 | G:0 Z:0
-  Tick: 0071 | PC: 014 | lw   rd:1 rs1:0 imm: 100 | R1:0 R2:3 R3:0 | G:0 Z:0
-  Tick: 0082 | PC: 015 | lw   rd:2 rs1:0 imm: 101 | R1:5 R2:3 R3:0 | G:0 Z:0
-  Tick: 0093 | PC: 016 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:0
-  Tick: 0094 | PC: 017 | beq  rd:0 rs1:0 imm:  24 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0095 | PC: 024 | lw   rd:1 rs1:0 imm: 101 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0096 | PC: 025 | lw   rd:2 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0107 | PC: 026 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0108 | PC: 027 | beq  rd:0 rs1:0 imm:  34 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0109 | PC: 034 | lw   rd:1 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0110 | PC: 035 | lw   rd:2 rs1:0 imm: 103 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0121 | PC: 036 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0122 | PC: 037 | beq  rd:0 rs1:0 imm:  44 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0123 | PC: 044 | lw   rd:1 rs1:0 imm: 104 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0134 | PC: 045 | li   rd:2 rs1:0 imm:   1 | R1:0 R2:5 R3:0 | G:0 Z:1
-  Tick: 0135 | PC: 046 | add  rd:1 rs1:1 imm:   2 | R1:0 R2:1 R3:0 | G:0 Z:1
-  Tick: 0136 | PC: 047 | sw   rd:0 rs1:1 imm: 104 | R1:1 R2:1 R3:0 | G:0 Z:1
-  Tick: 0137 | PC: 048 | jmp  rd:0 rs1:0 imm:  10 | R1:1 R2:1 R3:0 | G:0 Z:1
-  Tick: 0138 | PC: 010 | lw   rd:1 rs1:0 imm: 104 | R1:1 R2:1 R3:0 | G:0 Z:1
-  Tick: 0139 | PC: 011 | li   rd:2 rs1:0 imm:   3 | R1:1 R2:1 R3:0 | G:0 Z:1
-  Tick: 0140 | PC: 012 | cmp  rd:0 rs1:1 imm:   2 | R1:1 R2:3 R3:0 | G:0 Z:1
-  Tick: 0141 | PC: 013 | bgt  rd:0 rs1:0 imm:  49 | R1:1 R2:3 R3:0 | G:0 Z:0
-  Tick: 0142 | PC: 014 | lw   rd:1 rs1:0 imm: 100 | R1:1 R2:3 R3:0 | G:0 Z:0
-  Tick: 0153 | PC: 015 | lw   rd:2 rs1:0 imm: 101 | R1:5 R2:3 R3:0 | G:0 Z:0
-  Tick: 0164 | PC: 016 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:0
-  Tick: 0165 | PC: 017 | beq  rd:0 rs1:0 imm:  24 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0166 | PC: 024 | lw   rd:1 rs1:0 imm: 101 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0167 | PC: 025 | lw   rd:2 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0178 | PC: 026 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0179 | PC: 027 | beq  rd:0 rs1:0 imm:  34 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0180 | PC: 034 | lw   rd:1 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0181 | PC: 035 | lw   rd:2 rs1:0 imm: 103 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0192 | PC: 036 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0193 | PC: 037 | beq  rd:0 rs1:0 imm:  44 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0194 | PC: 044 | lw   rd:1 rs1:0 imm: 104 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0205 | PC: 045 | li   rd:2 rs1:0 imm:   1 | R1:1 R2:5 R3:0 | G:0 Z:1
-  Tick: 0206 | PC: 046 | add  rd:1 rs1:1 imm:   2 | R1:1 R2:1 R3:0 | G:0 Z:1
-  Tick: 0207 | PC: 047 | sw   rd:0 rs1:1 imm: 104 | R1:2 R2:1 R3:0 | G:0 Z:1
-  Tick: 0208 | PC: 048 | jmp  rd:0 rs1:0 imm:  10 | R1:2 R2:1 R3:0 | G:0 Z:1
-  Tick: 0209 | PC: 010 | lw   rd:1 rs1:0 imm: 104 | R1:2 R2:1 R3:0 | G:0 Z:1
-  Tick: 0210 | PC: 011 | li   rd:2 rs1:0 imm:   3 | R1:2 R2:1 R3:0 | G:0 Z:1
-  Tick: 0211 | PC: 012 | cmp  rd:0 rs1:1 imm:   2 | R1:2 R2:3 R3:0 | G:0 Z:1
-  Tick: 0212 | PC: 013 | bgt  rd:0 rs1:0 imm:  49 | R1:2 R2:3 R3:0 | G:0 Z:0
-  Tick: 0213 | PC: 014 | lw   rd:1 rs1:0 imm: 100 | R1:2 R2:3 R3:0 | G:0 Z:0
-  Tick: 0224 | PC: 015 | lw   rd:2 rs1:0 imm: 101 | R1:5 R2:3 R3:0 | G:0 Z:0
-  Tick: 0235 | PC: 016 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:0
-  Tick: 0236 | PC: 017 | beq  rd:0 rs1:0 imm:  24 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0237 | PC: 024 | lw   rd:1 rs1:0 imm: 101 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0238 | PC: 025 | lw   rd:2 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0249 | PC: 026 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0250 | PC: 027 | beq  rd:0 rs1:0 imm:  34 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0251 | PC: 034 | lw   rd:1 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0252 | PC: 035 | lw   rd:2 rs1:0 imm: 103 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0263 | PC: 036 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0264 | PC: 037 | beq  rd:0 rs1:0 imm:  44 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0265 | PC: 044 | lw   rd:1 rs1:0 imm: 104 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0276 | PC: 045 | li   rd:2 rs1:0 imm:   1 | R1:2 R2:5 R3:0 | G:0 Z:1
-  Tick: 0277 | PC: 046 | add  rd:1 rs1:1 imm:   2 | R1:2 R2:1 R3:0 | G:0 Z:1
-  Tick: 0278 | PC: 047 | sw   rd:0 rs1:1 imm: 104 | R1:3 R2:1 R3:0 | G:0 Z:1
-  Tick: 0279 | PC: 048 | jmp  rd:0 rs1:0 imm:  10 | R1:3 R2:1 R3:0 | G:0 Z:1
-  Tick: 0280 | PC: 010 | lw   rd:1 rs1:0 imm: 104 | R1:3 R2:1 R3:0 | G:0 Z:1
-  Tick: 0281 | PC: 011 | li   rd:2 rs1:0 imm:   3 | R1:3 R2:1 R3:0 | G:0 Z:1
-  Tick: 0282 | PC: 012 | cmp  rd:0 rs1:1 imm:   2 | R1:3 R2:3 R3:0 | G:0 Z:1
-  Tick: 0283 | PC: 013 | bgt  rd:0 rs1:0 imm:  49 | R1:3 R2:3 R3:0 | G:0 Z:1
-  Tick: 0284 | PC: 014 | lw   rd:1 rs1:0 imm: 100 | R1:3 R2:3 R3:0 | G:0 Z:1
-  Tick: 0295 | PC: 015 | lw   rd:2 rs1:0 imm: 101 | R1:5 R2:3 R3:0 | G:0 Z:1
-  Tick: 0306 | PC: 016 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0307 | PC: 017 | beq  rd:0 rs1:0 imm:  24 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0308 | PC: 024 | lw   rd:1 rs1:0 imm: 101 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0309 | PC: 025 | lw   rd:2 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0320 | PC: 026 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0321 | PC: 027 | beq  rd:0 rs1:0 imm:  34 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0322 | PC: 034 | lw   rd:1 rs1:0 imm: 102 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0323 | PC: 035 | lw   rd:2 rs1:0 imm: 103 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0334 | PC: 036 | cmp  rd:0 rs1:1 imm:   2 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0335 | PC: 037 | beq  rd:0 rs1:0 imm:  44 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0336 | PC: 044 | lw   rd:1 rs1:0 imm: 104 | R1:5 R2:5 R3:0 | G:0 Z:1
-  Tick: 0347 | PC: 045 | li   rd:2 rs1:0 imm:   1 | R1:3 R2:5 R3:0 | G:0 Z:1
-  Tick: 0348 | PC: 046 | add  rd:1 rs1:1 imm:   2 | R1:3 R2:1 R3:0 | G:0 Z:1
-  Tick: 0349 | PC: 047 | sw   rd:0 rs1:1 imm: 104 | R1:4 R2:1 R3:0 | G:0 Z:1
-  Tick: 0350 | PC: 048 | jmp  rd:0 rs1:0 imm:  10 | R1:4 R2:1 R3:0 | G:0 Z:1
-  Tick: 0351 | PC: 010 | lw   rd:1 rs1:0 imm: 104 | R1:4 R2:1 R3:0 | G:0 Z:1
-  Tick: 0352 | PC: 011 | li   rd:2 rs1:0 imm:   3 | R1:4 R2:1 R3:0 | G:0 Z:1
-  Tick: 0353 | PC: 012 | cmp  rd:0 rs1:1 imm:   2 | R1:4 R2:3 R3:0 | G:0 Z:1
-  Tick: 0354 | PC: 013 | bgt  rd:0 rs1:0 imm:  49 | R1:4 R2:3 R3:0 | G:1 Z:0
-  Tick: 0355 | PC: 049 | lw   rd:1 rs1:0 imm: 100 | R1:4 R2:3 R3:0 | G:1 Z:0
-  Tick: 0366 | PC: 050 | out  rd:0 rs1:1 imm: 132 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0367 | PC: 051 | lw   rd:1 rs1:0 imm: 101 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0378 | PC: 052 | out  rd:0 rs1:1 imm: 132 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0379 | PC: 053 | lw   rd:1 rs1:0 imm: 102 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0390 | PC: 054 | out  rd:0 rs1:1 imm: 132 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0391 | PC: 055 | lw   rd:1 rs1:0 imm: 103 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0402 | PC: 056 | out  rd:0 rs1:1 imm: 132 | R1:5 R2:3 R3:0 | G:1 Z:0
-  Tick: 0403 | PC: 057 | halt rd:0 rs1:0 imm:   0 | R1:5 R2:3 R3:0 | G:1 Z:0
+  Tick: 0017 | PC: 00 Opcode.IN R1:0 R2:0
+  Tick: 0018 | PC: 01 Opcode.SW R1:5 R2:0
+  Tick: 0019 | PC: 02 Opcode.IN R1:5 R2:0
+  Tick: 0020 | PC: 03 Opcode.SW R1:5 R2:0
+  Tick: 0031 | PC: 04 Opcode.IN R1:5 R2:0
+  Tick: 0032 | PC: 05 Opcode.SW R1:5 R2:0
+  Tick: 0043 | PC: 06 Opcode.IN R1:5 R2:0
+  Tick: 0044 | PC: 07 Opcode.SW R1:5 R2:0
+  Tick: 0055 | PC: 08 Opcode.LI R1:5 R2:0
+  Tick: 0056 | PC: 09 Opcode.SW R1:0 R2:0
+  Tick: 0067 | PC: 10 Opcode.LW R1:0 R2:0
+  Tick: 0068 | PC: 11 Opcode.LI R1:0 R2:0
+  Tick: 0069 | PC: 12 Opcode.CMP R1:0 R2:3
+  Tick: 0070 | PC: 13 Opcode.BGT R1:0 R2:3
+  Tick: 0071 | PC: 14 Opcode.LW R1:0 R2:3
+  Tick: 0082 | PC: 15 Opcode.LW R1:5 R2:3
+  Tick: 0093 | PC: 16 Opcode.CMP R1:5 R2:5
+  Tick: 0094 | PC: 17 Opcode.BEQ R1:5 R2:5
+  Tick: 0095 | PC: 24 Opcode.LW R1:5 R2:5
+  Tick: 0096 | PC: 25 Opcode.LW R1:5 R2:5
+  Tick: 0107 | PC: 26 Opcode.CMP R1:5 R2:5
+  Tick: 0108 | PC: 27 Opcode.BEQ R1:5 R2:5
+  Tick: 0109 | PC: 34 Opcode.LW R1:5 R2:5
+  Tick: 0110 | PC: 35 Opcode.LW R1:5 R2:5
+  Tick: 0121 | PC: 36 Opcode.CMP R1:5 R2:5
+  Tick: 0122 | PC: 37 Opcode.BEQ R1:5 R2:5
+  Tick: 0123 | PC: 44 Opcode.LW R1:5 R2:5
+  Tick: 0134 | PC: 45 Opcode.LI R1:0 R2:5
+  Tick: 0135 | PC: 46 Opcode.ADD R1:0 R2:1
+  Tick: 0136 | PC: 47 Opcode.SW R1:1 R2:1
+  Tick: 0137 | PC: 48 Opcode.JMP R1:1 R2:1
+  Tick: 0138 | PC: 10 Opcode.LW R1:1 R2:1
+  Tick: 0139 | PC: 11 Opcode.LI R1:1 R2:1
+  Tick: 0140 | PC: 12 Opcode.CMP R1:1 R2:3
+  Tick: 0141 | PC: 13 Opcode.BGT R1:1 R2:3
+  Tick: 0142 | PC: 14 Opcode.LW R1:1 R2:3
+  Tick: 0153 | PC: 15 Opcode.LW R1:5 R2:3
+  Tick: 0164 | PC: 16 Opcode.CMP R1:5 R2:5
+  Tick: 0165 | PC: 17 Opcode.BEQ R1:5 R2:5
+  Tick: 0166 | PC: 24 Opcode.LW R1:5 R2:5
+  Tick: 0167 | PC: 25 Opcode.LW R1:5 R2:5
+  Tick: 0178 | PC: 26 Opcode.CMP R1:5 R2:5
+  Tick: 0179 | PC: 27 Opcode.BEQ R1:5 R2:5
+  Tick: 0180 | PC: 34 Opcode.LW R1:5 R2:5
+  Tick: 0181 | PC: 35 Opcode.LW R1:5 R2:5
+  Tick: 0192 | PC: 36 Opcode.CMP R1:5 R2:5
+  Tick: 0193 | PC: 37 Opcode.BEQ R1:5 R2:5
+  Tick: 0194 | PC: 44 Opcode.LW R1:5 R2:5
+  Tick: 0205 | PC: 45 Opcode.LI R1:1 R2:5
+  Tick: 0206 | PC: 46 Opcode.ADD R1:1 R2:1
+  Tick: 0207 | PC: 47 Opcode.SW R1:2 R2:1
+  Tick: 0208 | PC: 48 Opcode.JMP R1:2 R2:1
+  Tick: 0209 | PC: 10 Opcode.LW R1:2 R2:1
+  Tick: 0210 | PC: 11 Opcode.LI R1:2 R2:1
+  Tick: 0211 | PC: 12 Opcode.CMP R1:2 R2:3
+  Tick: 0212 | PC: 13 Opcode.BGT R1:2 R2:3
+  Tick: 0213 | PC: 14 Opcode.LW R1:2 R2:3
+  Tick: 0224 | PC: 15 Opcode.LW R1:5 R2:3
+  Tick: 0235 | PC: 16 Opcode.CMP R1:5 R2:5
+  Tick: 0236 | PC: 17 Opcode.BEQ R1:5 R2:5
+  Tick: 0237 | PC: 24 Opcode.LW R1:5 R2:5
+  Tick: 0238 | PC: 25 Opcode.LW R1:5 R2:5
+  Tick: 0249 | PC: 26 Opcode.CMP R1:5 R2:5
+  Tick: 0250 | PC: 27 Opcode.BEQ R1:5 R2:5
+  Tick: 0251 | PC: 34 Opcode.LW R1:5 R2:5
+  Tick: 0252 | PC: 35 Opcode.LW R1:5 R2:5
+  Tick: 0263 | PC: 36 Opcode.CMP R1:5 R2:5
+  Tick: 0264 | PC: 37 Opcode.BEQ R1:5 R2:5
+  Tick: 0265 | PC: 44 Opcode.LW R1:5 R2:5
+  Tick: 0276 | PC: 45 Opcode.LI R1:2 R2:5
+  Tick: 0277 | PC: 46 Opcode.ADD R1:2 R2:1
+  Tick: 0278 | PC: 47 Opcode.SW R1:3 R2:1
+  Tick: 0279 | PC: 48 Opcode.JMP R1:3 R2:1
+  Tick: 0280 | PC: 10 Opcode.LW R1:3 R2:1
+  Tick: 0281 | PC: 11 Opcode.LI R1:3 R2:1
+  Tick: 0282 | PC: 12 Opcode.CMP R1:3 R2:3
+  Tick: 0283 | PC: 13 Opcode.BGT R1:3 R2:3
+  Tick: 0284 | PC: 14 Opcode.LW R1:3 R2:3
+  Tick: 0295 | PC: 15 Opcode.LW R1:5 R2:3
+  Tick: 0306 | PC: 16 Opcode.CMP R1:5 R2:5
+  Tick: 0307 | PC: 17 Opcode.BEQ R1:5 R2:5
+  Tick: 0308 | PC: 24 Opcode.LW R1:5 R2:5
+  Tick: 0309 | PC: 25 Opcode.LW R1:5 R2:5
+  Tick: 0320 | PC: 26 Opcode.CMP R1:5 R2:5
+  Tick: 0321 | PC: 27 Opcode.BEQ R1:5 R2:5
+  Tick: 0322 | PC: 34 Opcode.LW R1:5 R2:5
+  Tick: 0323 | PC: 35 Opcode.LW R1:5 R2:5
+  Tick: 0334 | PC: 36 Opcode.CMP R1:5 R2:5
+  Tick: 0335 | PC: 37 Opcode.BEQ R1:5 R2:5
+  Tick: 0336 | PC: 44 Opcode.LW R1:5 R2:5
+  Tick: 0347 | PC: 45 Opcode.LI R1:3 R2:5
+  Tick: 0348 | PC: 46 Opcode.ADD R1:3 R2:1
+  Tick: 0349 | PC: 47 Opcode.SW R1:4 R2:1
+  Tick: 0350 | PC: 48 Opcode.JMP R1:4 R2:1
+  Tick: 0351 | PC: 10 Opcode.LW R1:4 R2:1
+  Tick: 0352 | PC: 11 Opcode.LI R1:4 R2:1
+  Tick: 0353 | PC: 12 Opcode.CMP R1:4 R2:3
+  Tick: 0354 | PC: 13 Opcode.BGT R1:4 R2:3
+  Tick: 0355 | PC: 49 Opcode.LW R1:4 R2:3
+  Tick: 0366 | PC: 50 Opcode.OUT R1:5 R2:3
+  Tick: 0367 | PC: 51 Opcode.LW R1:5 R2:3
+  Tick: 0378 | PC: 52 Opcode.OUT R1:5 R2:3
+  Tick: 0379 | PC: 53 Opcode.LW R1:5 R2:3
+  Tick: 0390 | PC: 54 Opcode.OUT R1:5 R2:3
+  Tick: 0391 | PC: 55 Opcode.LW R1:5 R2:3
+  Tick: 0402 | PC: 56 Opcode.OUT R1:5 R2:3
+  Tick: 0403 | PC: 57 Opcode.HALT R1:5 R2:3
 out_stdout: 5 5 5 5

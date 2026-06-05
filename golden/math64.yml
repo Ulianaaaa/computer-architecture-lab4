@@ -15,13 +15,13 @@ out_code: |-
   0000001C - 0E010084 - Opcode.OUT rd:0 rs1:1 imm:132
   00000020 - FF000000 - Opcode.HALT rd:0 rs1:0 imm:0
 out_log: |-
-  Tick: 0000 | PC: 000 | li   rd:1 rs1:0 imm:   1 | R1:0 R2:0 R3:0 | G:0 Z:0
-  Tick: 0001 | PC: 001 | sw   rd:0 rs1:1 imm: 100 | R1:1 R2:0 R3:0 | G:0 Z:0
-  Tick: 0012 | PC: 002 | li   rd:1 rs1:0 imm:-3584 | R1:1 R2:0 R3:0 | G:0 Z:0
-  Tick: 0013 | PC: 003 | sw   rd:0 rs1:1 imm: 101 | R1:-3584 R2:0 R3:0 | G:0 Z:0
-  Tick: 0024 | PC: 004 | lw   rd:1 rs1:0 imm: 100 | R1:-3584 R2:0 R3:0 | G:0 Z:0
-  Tick: 0025 | PC: 005 | out  rd:0 rs1:1 imm: 132 | R1:1 R2:0 R3:0 | G:0 Z:0
-  Tick: 0026 | PC: 006 | lw   rd:1 rs1:0 imm: 101 | R1:1 R2:0 R3:0 | G:0 Z:0
-  Tick: 0027 | PC: 007 | out  rd:0 rs1:1 imm: 132 | R1:-3584 R2:0 R3:0 | G:0 Z:0
-  Tick: 0028 | PC: 008 | halt rd:0 rs1:0 imm:   0 | R1:-3584 R2:0 R3:0 | G:0 Z:0
+  Tick: 0000 | PC: 00 Opcode.LI R1:0 R2:0
+  Tick: 0001 | PC: 01 Opcode.SW R1:1 R2:0
+  Tick: 0012 | PC: 02 Opcode.LI R1:1 R2:0
+  Tick: 0013 | PC: 03 Opcode.SW R1:-3584 R2:0
+  Tick: 0024 | PC: 04 Opcode.LW R1:-3584 R2:0
+  Tick: 0025 | PC: 05 Opcode.OUT R1:1 R2:0
+  Tick: 0026 | PC: 06 Opcode.LW R1:1 R2:0
+  Tick: 0027 | PC: 07 Opcode.OUT R1:-3584 R2:0
+  Tick: 0028 | PC: 08 Opcode.HALT R1:-3584 R2:0
 out_stdout: 1 -3584
