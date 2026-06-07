@@ -1,10 +1,8 @@
-n = read();
 v0 = read();
 v1 = read();
 v2 = read();
 v3 = read();
 
-swapped = 1;
 for (pass = 0, 3, 1) {
     if (v0 > v1) { tmp = v0; v0 = v1; v1 = tmp; }
     if (v1 > v2) { tmp = v1; v1 = v2; v2 = tmp; }

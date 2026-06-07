@@ -11,12 +11,10 @@ out_code: |-
   0000000C - 0E010084 - Opcode.OUT rd:0 rs1:1 imm:132
   00000010 - FF000000 - Opcode.HALT rd:0 rs1:0 imm:0
 out_log: |-
-  Tick: 0000 | PC: 00 Opcode.IN R1:0 R2:0
-  Tick: 0001 | PC: 01 Opcode.SW R1:0 R2:0
-  TICK: 0012 | !!! TRAP INTERRUPT: Value 77 !!!
-  Tick: 0017 | PC: 00 Opcode.IN R1:0 R2:0
-  Tick: 0018 | PC: 01 Opcode.SW R1:77 R2:0
-  Tick: 0019 | PC: 02 Opcode.LW R1:77 R2:0
-  Tick: 0020 | PC: 03 Opcode.OUT R1:77 R2:0
-  Tick: 0021 | PC: 04 Opcode.HALT R1:77 R2:0
+  Tick: 0000 | PC: 00 in      R1:0 R2:0 | G:0 Z:0
+  TICK: 0010 | !!! TRAP INTERRUPT: Value 77 !!!
+  Tick: 0015 | PC: 01 sw      R1:77 R2:0 | G:0 Z:0
+  Tick: 0026 | PC: 02 lw      R1:77 R2:0 | G:0 Z:0
+  Tick: 0027 | PC: 03 out     R1:77 R2:0 | G:0 Z:0
+  Tick: 0028 | PC: 04 halt    R1:77 R2:0 | G:0 Z:0
 out_stdout: '77'
